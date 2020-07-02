@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:600,700&display=swap" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet"> 
+    <style>
+        html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+        html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+        .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+        html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+        
+        *, *:before, *:after {box-sizing: inherit}
+        
+        .visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+         .clearfix:after {visibility: hidden; display: block; font-size: 0; content:''; clear: both; height: 0; } 
+         html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+         *, *:before, *:after { box-sizing: inherit; }
+      
+         
+    </style>
+</head>
+
+    <body>
+
+    <!-- navbar-->
+        <nav id="navbar">   
+            <div class="navwrapper"> 
+                <ul class="menu">
+                    <li>Projects</li>
+                    <li>About</li>
+                </ul>
+                <div class="logocontainer">
+                    <img class="logo" src="../oak/assets/Logo Oak2.png">
+                    <div class="logodescription">Interior Design</div>
+                </div> 
+                <ul class="menu">
+                    <li>Services</li>
+                    <li>Testimonial</li>
+                </ul>
+                <div class="menubuttonborder">
+                    <div class="menubutton" onclick="navMobile(this)"> 
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="menuicon"></div>
+                        <div class="menuiconcontainer">
+                            <div class="menuiconcontainertitle">
+                                <h1>Projects</h1>
+                            </div>
+                            <div class="menuiconcontainertitle">
+                                <h1>About</h1>
+                            </div>
+                            <div class="menuiconcontainertitle">
+                                <h1>Services</h1>
+                            </div>
+                            <div class="menuiconcontainertitle">
+                                <h1>Testimonial</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Hero Image-->
+        <div class="heroimages">
+            <div class="heroContainer">
+                <img src="../oak/assets/Image002.png" class="heroImage-1 heroGraphic progressiveImage">
+                <img src="../oak/assets/image01.png" class="heroImage-2 heroGraphic progressiveImage">
+                <img src="../oak/assets/image03.png" class="heroImage-3 heroGraphic progressiveImage">
+            </div>
+        </div>
+        <div class="taglineContainer">
+            <div class="taglinewrapper">
+                <div class="taglineContainer-1">WE</div>
+                <div class="tagline">
+                    <div class="taglineWord-1">
+                        <div style="flex-direction: row; align-items: center; justify-content: flex-start;" href="" class="typewrite" data-period="2000" data-type='[ "INNOVATE", "CREATE", "DESIGN", "BUILD" ]'>
+                        <span class="wrap"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Fixed Logo-->
+        <div class="fixedtext">
+            <div class="fixedlogo"> 
+              
+                <img class="LogofixedBG" src="../oak/assets/Logo Oak.png">
+                <div class="fixedlogodescription">
+                    Makes a place, in which you live
+                </div>
+            </div>
+        </div>
+       
+
+    <!-- About container-->
+        <div class="about">
+            <div class="maxwidth">
+                <div class="aboutimg">
+                    <img id="rotating" src="assets/gold geometric-4-01.svg">
+                </div>
+                <div class="abouttitle">
+                    <h1 class="aboutpadding">Design is a process of discovery and decisions.</h1>
+                </div>
+                <div class="abouttext">
+                    <p class="paddingtext">OAK is a full-service, high-end architecture, interior design and decorating firm based in Toronto with a second location in Ottawa, the principal architect behind OAK, is known for his distinctly modern commercial and residential work.</p>
+                    <div class="aboutbuttun">
+                        <div class="aboutbtn1">
+                            <span>LEARN MORE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Project Slideshow container -->
+        <div class="mainwrapper">
+            <div class="projectsection">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="overflow">
+                            <div class="projecttext">
+                                <div class="padding">
+                                    <div class="projectsubtitle">
+                                        <span>Remodel</span>
+                                    </div>
+                                    <div class="projecttextinside">
+                                        <div class="projecttexth1">
+                                            <h1>North-Broadway</h1>
+                                        </div>
+                                        <p>The intention for the North-Broadway was to create a modern distillation of a Green House personal and every need was catered for; to provide a sanctuary to escape from the stresses and pace of city life, a haven for pleasure and relaxation.</p>
+                                    </div>
+                                    <div class="projectbutton">
+                                        <div class="projectbtn1">
+                                            <span>View this project</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="imgwidth">
+                                <div  class="imgwidth2">
+                                    <img src="../oak/assets/image05.png">
+                                </div>
+                                <div class="imagedescription">
+                                    commercial
+                                </div>
+                                <div class="Number">
+                                    01
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="overflow">
+                            <div class="projecttext">
+                                <div class="padding">
+                                    <div class="projectsubtitle">
+                                        <span>Renovation</span>
+                                    </div>
+                                    <div class="projecttextinside">
+                                        <div class="projecttexth1">
+                                            <h1>The Great House</h1>
+                                        </div>
+                                        <p>Oak design group offers a personalized construction and renovation service to individuals looking to improve the appearance of their home, always with care and attention to detail.</p>
+                                    </div>
+                                    <div class="projectbutton">
+                                        <span>View this project</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="imgwidth">
+                                <img src="../oak/assets/image04.png" style="width: 100%;">
+                                <div class="imagedescription">Residential
+                                </div>
+                                <div class="Number">02</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="overflow">
+                            <div class="projecttext">
+                                <div class="padding">
+                                    <div class="projectsubtitle">
+                                        <span>Interior design</span>
+                                    </div>
+                                    <div class="projecttextinside">
+                                        <div class="projecttexth1">
+                                            <h1>JAVA café</h1>
+                                        </div>
+                                        <p>Each interior design project is as unique as each client. Our luxury residential properties are tailored to individual dreams, desires and lifestyles. A turn-key project that exudes warmth while also feeling distinctly modern.
+                                        </p>
+                                    </div>
+                                    <div class="projectbutton">
+                                        <span>View this project</span>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="imgwidth">
+                                <img src="../oak/assets/image06.png" style="width: 100%;">
+                                <div class="imagedescription">commercial
+                                </div>
+                                <div class="Number">03</div>
+                            </div>
+                    </div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onmousedown="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <div class="processicon">
+                    <div class="rotatingshape">
+                        <div class="goldlinerotate"> 
+                            <div class="rotating2">
+                                <img id="rotating" src="assets/gold geometric-02-01.svg">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!-- Process container -->
+            <div class="processsection">
+               
+                <div class="processtext">
+                    <div class="processsubtitle">
+                        <span>Our process</span>
+                    </div>
+                    <div class="processstitle"><h1>From imagination<br>to immersion</h1>
+                    </div>
+                    <div class="process">
+                        <div class="process1">
+                                <div class="processtitle">
+                                    <h1>Strategy</h1>
+                                </div>
+                                <div class="processtext1">
+                                    <p>To start creating the project, we have to prepare in a certain way. Usually we hold one or several meetings with the clients and find out their ideas and requirements to the future design.</p>
+                                </div>
+                        </div>
+                        <div class="process2">
+                          
+                                <div class="processtitle">
+                                    <h1>Core concept</h1>
+                                </div>
+                                <div class="processtext2">
+                                    <p>Such depth of expertise means we have the technical insight, connections and detailed eye to take concepts through into reality flawlessly.</p>
+                            </div>
+                        </div>
+                        <div class="process3">
+                           
+                                <div class="processtitle">
+                                    <h1>output</h1>
+                                </div>
+                                <div class="processtext3">
+                                    <p>We help to refine the final design with additional artwork and accessories, resolving any damage resolution and tying up any loose ends.</p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+       
+
+        <!-- Team section -->
+        <div class="mainwrapper">
+            <div class="teamsection">
+                <div class="teamimg1">
+                    <div class="imgwidth2">
+                        <img src="../oak/assets/team.jpg">
+                    </div>
+                </div>
+                <div class="team">
+                    <div class="teamtext padding3">
+                        <div class="projectsubtitle">
+                            <span>Behind the scenes</span>
+                        </div>
+                        <div class="projecttexth1">
+                            <h1>scope of services</h1>
+                        </div>
+                            <p>We are custom designers. Every aspect of our process is tailored to our clients—their wants, their needs, their realities. We are intent listeners and diligent doers. We see opportunities and create solutions. Together, we make a house a home—whether building anew, remodeling, or refreshing. Together, we imagine living, beautifully.</p>
+                        <div class="teambutton">
+                            <div class="teambtn">
+                                <span>Our team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Contact section -->
+            <div class="contactsection">
+                <div class="contacticon">
+                    <div class="rotatingshape">
+                        <div class="goldlinerotate"> 
+                            <div class="rotating2">
+                                <img id="rotating" src="assets/gold geometric-3-01.svg">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="contactpadding">
+                    <div class="contacttitle">
+                        <div class="contacth1">
+                            <h1>Let's Make Your
+                                Vision a Reality.</h1>
+                        </div>
+                    </div>
+                    <div class="contacttext">
+                        <p class="contactp"> We are always open to meet creatives, and possibly collaborate on projects. Please feel free to contact us if you are interested in Oak!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   <!-- Footer section -->
+            <footer>
+                <div class="footer">
+                    <div class="footersection1">
+                        <div class="footerblog">
+                            <span>Blog</span></div>
+                        <div class="footerblog">
+                            <span>Ideas & Inspiration</span>
+                        </div>
+                        <div class="footerblog">
+                            <span>Services</span>
+                        </div>
+                       
+                    </div>
+                        <div class="Weeklynewsletter"> 
+                          
+                                <form class="subscribe">
+                                <input class="enteryouremail"
+                                type="email" name="EMAIL" placeholder="Your email address">
+                                <button class="subscribebutton" title="Subscribe">
+                                <span>Subscribe</span>
+                                </button>
+                            </form>
+                            
+                            
+                        </div>
+                    <div class="footersection3">
+                        <div class="footercontact">
+                            <span>Contact</span>
+                        </div>
+                        <div class="footercontact">
+                            <span>FAC & Policiy</span>
+                        </div>
+                        <div class="footersocialmedia">
+                            <span><a href="#" class="fa fa-facebook"></a></span>
+                            <span><a href="#" class="fa fa-twitter"></a></span>  
+                            <span><a href="#" class="fa fa-instagram"></a></span>  
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="footercopyright">
+                    <p> 2020 Oak Interior design limited
+                    Designed by Manaz Sadeq</p>
+                </div>
+            </footer>
+        
+
+    <script>
+            window.onscroll = function() {navScroll()};
+                function navScroll() {
+                if (document.body.scrollTop > 50 || 
+                document.documentElement.scrollTop > 50) {
+                    document.getElementById("navbar").className = "navbarchange";}
+                else {
+                document.getElementById("navbar").className = "";   
+                }
+                }
+                function navMobile(icon) {
+                    icon.classList.toggle("mobilmenu");   
+                }
+
+                var TxtType = function(el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+
+        TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+            }
+
+            setTimeout(function() {
+            that.tick();
+            }, delta);
+        };
+
+        window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i=0; i<elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
+
+
+
+
+
+
+$('.img-parallax').each(function(){
+  var img = $(this);
+  console.log('hel');
+  var imgParent = $(this).parent();
+  function parallaxImg () {
+    var speed = img.data('speed');
+    var imgY = imgParent.offset().top;
+    var winY = $(this).scrollTop();
+    var winH = $(this).height();
+    var parentH = imgParent.innerHeight();
+    console.log('hel');
+
+    // The next pixel to show on screen      
+    var winBottom = winY + winH;
+
+    // If block is shown on screen
+    if (winBottom > imgY && winY < imgY + parentH) {
+      // Number of pixels shown after block appear
+      var imgBottom = ((winBottom - imgY) * speed);
+      // Max number of pixels until block disappear
+      var imgTop = winH + parentH;
+      // Porcentage between start showing until disappearing
+      var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+    }
+    img.css({
+      top: imgPercent + '%',
+      transform: 'translate(0%, -' + imgPercent + '%)'
+    });
+  }
+  $(document).on({
+    scroll: function () {
+      parallaxImg();
+    }, ready: function () {
+      parallaxImg();
+    }
+  });
+});
+
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+
+
+
+
+// debounce from underscore.js
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+
+
+
+
+            </script>
+
+           
+    </body>
+</html>
+
+  
+  
